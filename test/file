@@ -1,0 +1,6 @@
+posix.stat_result(st_mode=33188, st_ino=3940649674337682L, st_dev=277923425L, st
+_nlink=1, st_uid=400, st_gid=401, st_size=335L, st_atime=1330498070, st_mtime=13
+30498074, st_ctime=1330498065)
+access time of a2.py: 1330498070
+modified time of a2.py: 1330498074
+done!!

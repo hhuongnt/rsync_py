@@ -1,0 +1,17 @@
+from os import symlink, readlink, stat, chmod, utime, path
+# link_origin = readlink('sym_file')  # link to file
+symlink('dest_w_time', 'new_link1')
+symlink('dest_w_time', 'new_link2')
+# chmod('copy_sym', stat('sym_file').st_mode)
+# time = (stat(path.abspath('file')).st_atime, stat(path.abspath('file')).st_mtime)
+# print (time)
+# utime(path.abspath('copy_3'), time)
+# time2 = (stat('copy_3').st_atime, stat('copy_3').st_mtime)
+# print (time2)
+time = (stat(path.abspath('new_link1')).st_atime, stat(path.abspath('new_link1')).st_mtime)
+time2 = (stat(path.abspath('new_link2')).st_atime, stat(path.abspath('new_link2')).st_mtime)
+print (time)
+print (time2)
+utime(path.abspath('new_link2'),(1330712280, 1330712292), follow_symlinks = False )
+time2 = (stat(path.abspath('new_link2')).st_atime, stat(path.abspath('new_link2')).st_mtime)
+print (time2)
